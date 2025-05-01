@@ -1,7 +1,0 @@
-{
-    "name": "ecommerce/php",
-    "description": "Tienda de ropa",
-    "require": {
-      "php": ">=7.4"
-    }
-  }
