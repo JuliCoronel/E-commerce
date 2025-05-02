@@ -26,7 +26,7 @@ Los administradores (rol admin) pueden:
 
 ### 🗃️ 1. Base de datos
 
-Para importar la base de datos utilizada vaya a la carpeta **database/**, donde encontrará lo necesario para cada tabla.
+Para importar la base de datos utilizada vaya a la carpeta `database/`, donde encontrará lo necesario para cada tabla.
 
 Para incluirla en MySQL puede usar **phpMyAdmin** importando el archivo database.sql o puede hacerlo consulta por consulta desde la consola de MySQL.
 
@@ -37,7 +37,6 @@ El archivo `.htaccess` contiene configuraciones sensibles, por lo que **no está
 Para ello cree el archivo de ejemplo *.htaccess.example*, al cual deberán cambiarle el nombre por `.htaccess`, para que puedan completar con sus datos de conexión a la base de datos (host, usuario, contraseña, nombre de la base de datos).
 
 **Asegurarse de que el módulo mod_env esté habilitado en Apache.**
----
 
 ## ✅ Requisitos
 

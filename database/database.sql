@@ -43,21 +43,20 @@ CONSTRAINT pk_productos PRIMARY KEY(id),
 CONSTRAINT fk_producto_categoria FOREIGN KEY(categoria_id) REFERENCES categorias(id)
 )ENGINE=InnoDB;
 
-INSERT INTO productos VALUES
-(null, 2, 'Pantalon MIA', 'Wide leg tiro bajo', 50000.00, 40, NULL, CURDATE(), NULL),
-(null, 1, 'Camisa India', 'Camisa de rayas de algodón', 10000.00, 10, NULL, CURDATE(), NULL),
-(null, 2, 'Baggy Malena', 'Jean dama baggy celeste tiro medio', 60000.00, 24, NULL, CURDATE(), 'pantalon baggy.jpg'),
-(null, 4, 'Buzo Flor 2.0', 'Buzo oversize 100% algodón color camel', 60000.00, 20, NULL, CURDATE(), 'buzo over 2.0.jpg'),
-(null, 4, 'Buzo Julieta', 'Buzo Julieta de primavera, NO FRIZADO', 40000.00, 12, NULL, CURDATE(), 'buzo oversize.jpg'),
-(null, 6, 'Zapatillas Tiana', 'Zapatillas Air Jordan 4 de muy buena calidad, producto 100% de calidad', 350000.00, 30, NULL, CURDATE(), 'zapatillas3.jpg'),
-(null, 6, 'Zapatillas Andy', 'Zapatillas Jordan Air Retro 3, color blanco y rojo de calidad, 100% originales', 400000.00, 20, NULL, CURDATE(), 'zapatillas2.webp'),
-(null, 6, 'Zapatillas Layla', 'Zapatillas Air Jordan 1 Low blanco y gris de hermosa calidad, producto 100% original', 230000.00, 15, NULL, CURDATE(), 'zapatillas1.webp'),
-(null, 3, 'Short Mica', 'Short de jean azul desflecado, tiro medio y con excelente calidad. Bolsillos funcionales.', 25000.00, 45, NULL, CURDATE(), 'short1.webp'),
-(null, 3, 'Short Ana', 'Short de jean celeste con dobladillo, tiro bajo y con bolsillos funcionales. ¡Lo vas a amar!', 30000.00, 30, NULL, CURDATE(), 'short2.webp'),
-(null, 3, 'Short de morley', 'Short de tela morley negro. Súper fresco y moderno.', 15000.00, 50, NULL, CURDATE(), 'short3.jpg'),
-(null, 3, 'Short Lina', 'Short de jean ajustado, tiro alto, celeste clarito y con dobladillo.', 19000.00, 73, NULL, CURDATE(), 'short4.webp'),
-(null, 1, 'Remera Amanda', 'Top blanco de tirantes y ajustada. ¡Hermoso calce!', 13000.00, 35, NULL, CURDATE(), 'remera1.webp'),
-(null, 1, 'Remera Mili', 'Top negro de manga corta al cuerpo. ¡Hermosa!', 14000.00, 34, NULL, CURDATE(), 'remera2.jpg');
+INSERT INTO productos VALUES (null, 2, 'Pantalon MIA', 'Wide leg tiro bajo', 50000.00, 40, NULL, CURDATE(), NULL);
+INSERT INTO productos VALUES (null, 1, 'Camisa India', 'Camisa de rayas de algodón', 10000.00, 10, NULL, CURDATE(), NULL);
+INSERT INTO productos VALUES (null, 2, 'Baggy Malena', 'Jean dama baggy celeste tiro medio', 60000.00, 24, NULL, CURDATE(), 'pantalon baggy.jpg');
+INSERT INTO productos VALUES (null, 4, 'Buzo Flor 2.0', 'Buzo oversize 100% algodón color camel', 60000.00, 20, NULL, CURDATE(), 'buzo over 2.0.jpg');
+INSERT INTO productos VALUES (null, 4, 'Buzo Julieta', 'Buzo Julieta de primavera, NO FRIZADO', 40000.00, 12, NULL, CURDATE(), 'buzo oversize.jpg');
+INSERT INTO productos VALUES (null, 5, 'Zapatillas Tiana', 'Zapatillas Air Jordan 4 de muy buena calidad, producto 100% de calidad', 350000.00, 30, NULL, CURDATE(), 'zapatillas3.jpg');
+INSERT INTO productos VALUES (null, 5, 'Zapatillas Andy', 'Zapatillas Jordan Air Retro 3, color blanco y rojo de calidad, 100% originales', 400000.00, 20, NULL, CURDATE(), 'zapatillas2.webp');
+INSERT INTO productos VALUES (null, 5, 'Zapatillas Layla', 'Zapatillas Air Jordan 1 Low blanco y gris de hermosa calidad, producto 100% original', 230000.00, 15, NULL, CURDATE(), 'zapatillas1.webp');
+INSERT INTO productos VALUES (null, 3, 'Short Mica', 'Short de jean azul desflecado, tiro medio y con excelente calidad. Bolsillos funcionales.', 25000.00, 45, NULL, CURDATE(), 'short1.webp');
+INSERT INTO productos VALUES (null, 3, 'Short Ana', 'Short de jean celeste con dobladillo, tiro bajo y con bolsillos funcionales. ¡Lo vas a amar!', 30000.00, 30, NULL, CURDATE(), 'short2.webp');
+INSERT INTO productos VALUES (null, 3, 'Short de morley', 'Short de tela morley negro. Súper fresco y moderno.', 15000.00, 50, NULL, CURDATE(), 'short3.jpg');
+INSERT INTO productos VALUES (null, 3, 'Short Lina', 'Short de jean ajustado, tiro alto, celeste clarito y con dobladillo.', 19000.00, 73, NULL, CURDATE(), 'short4.webp');
+INSERT INTO productos VALUES (null, 1, 'Remera Amanda', 'Top blanco de tirantes y ajustada. ¡Hermoso calce!', 13000.00, 35, NULL, CURDATE(), 'remera1.webp');
+INSERT INTO productos VALUES (null, 1, 'Remera Mili', 'Top negro de manga corta al cuerpo. ¡Hermosa!', 14000.00, 34, NULL, CURDATE(), 'remera2.jpg');
 
 CREATE TABLE pedidos(
 id              int(255) auto_increment not null,
@@ -82,3 +81,4 @@ CONSTRAINT pk_lineas_pedidos PRIMARY KEY(id),
 CONSTRAINT fk_lineas_pedido FOREIGN KEY(pedido_id) REFERENCES pedidos(id),
 CONSTRAINT fk_lineas_producto FOREIGN KEY(producto_id) REFERENCES productos(id)
 )ENGINE=InnoDB;
+
