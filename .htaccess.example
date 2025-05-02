@@ -10,7 +10,7 @@
 
 <IfModule mod_env.c>
     SetEnv DB_HOST localhost
-    SetEnv DB_USER root
-    SetEnv DB_PASSWORD 
+    SetEnv DB_USER tu_usuario
+    SetEnv DB_PASSWORD tu_contrasena
     SetEnv DB_NAME tienda_master
 </IfModule>
