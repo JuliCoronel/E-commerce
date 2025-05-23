@@ -46,3 +46,14 @@ Para ello cree el archivo de ejemplo *.htaccess.example*, al cual deberán cambi
 
 - Servidor Apache (XAMPP/WAMP recomendado)
 
+## 🗒️ Nota
+
+Para ver el modo administrador de la página web deberá:
+- Importar la base de datos
+- Configurar variables de entorno
+- Entrar a la página por el localhost
+- Registrarse
+- Dirigirse a la base de datos importada e ir a la tabla usuario
+- En el usuario que registró, cambiar el valor del atributo "rol" a "admin"
+
+Al iniciar sesión ya podrá ver las funciones del administrador👐
