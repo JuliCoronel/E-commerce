@@ -2,6 +2,14 @@
 
 Este es un proyecto de aplicación web de tienda online desarrollado con **PHP**, **MySQL**, **CSS** y programación orientada a objetos (**POO**).
 
+**Deploy:** https://e-commercephp.infinityfreeapp.com/
+
+*Rol administrador:*
+
+Email: admin@admin.com
+
+Contraseña: Admin
+
 ## ✨ Funcionalidades
 
 Los usuarios pueden:
