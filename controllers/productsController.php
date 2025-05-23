@@ -1,5 +1,5 @@
 <?php
-require_once 'models/product.php';
+require_once __DIR__.'/../models/product.php';
 
 class ProductsController{
 
@@ -7,7 +7,7 @@ class ProductsController{
         $product = new Product;
         $products = $product->getRandom(6);
 
-        require_once 'views/product/featured.php';
+        require_once __DIR__.'/../views/product/featured.php';
     }
 
     public function watch(){
@@ -19,7 +19,7 @@ class ProductsController{
             $product = $product->getOne();
 
         } 
-        require_once 'views/product/watch.php';
+        require_once __DIR__.'/../views/product/watch.php';
     }
 
     public function management(){
@@ -30,12 +30,12 @@ class ProductsController{
         $products = $product->getAll();
 
 
-        require_once 'views/product/management.php';
+        require_once __DIR__.'/../views/product/management.php';
     }
 
     public function create(){
         Utils::isAdmin();
-        require_once 'views/product/create.php';
+        require_once __DIR__.'/../views/product/create.php';
     }
 
     public function save(){
@@ -103,7 +103,7 @@ class ProductsController{
             $product->setId($id);
             $pro = $product->getOne();
 
-            require_once 'views/product/create.php';
+            require_once __DIR__.'/../views/product/create.php';
         } else{
             header('Location:'.base_url.'products/management');
         }

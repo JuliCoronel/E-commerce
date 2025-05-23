@@ -1,5 +1,5 @@
 <?php
-require_once 'models/user.php';
+require_once __DIR__.'/../models/user.php';
 
 class UsersController{
     public function index(){
@@ -7,7 +7,7 @@ class UsersController{
     }
 
     public function register(){
-        require_once 'views/user/register.php';
+        require_once __DIR__.'/../views/user/register.php';
     }
 
     public function save(){

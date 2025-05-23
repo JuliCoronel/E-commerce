@@ -1,19 +1,19 @@
 <?php
 session_start();
-require_once 'autoload.php';
-require_once 'config/db.php';
-require_once 'config/parameters.php';
-require_once 'helpers/utils.php';
-require_once 'views/layout/header.php';
-require_once 'views/layout/sidebar.php'; 
+require_once __DIR__.'/autoload.php';
+require_once __DIR__.'/config/db.php';
+require_once __DIR__.'/config/parameters.php';
+require_once __DIR__.'/helpers/utils.php';
+require_once __DIR__.'/views/layout/header.php';
+require_once __DIR__.'/views/layout/sidebar.php'; 
 
 function show_error(){
-    $error = new errorsController();
+    $error = new ErrorsController();
     $error->index();
 }
 
 if(isset($_GET{'controller'})){
-    $controllerName = $_GET['controller'].'Controller';
+    $controllerName = ucfirst($_GET['controller']).'Controller';
 } elseif (!isset($_GET{'controller'}) && !isset($_GET['action'])) {
     $controllerName = controller_default;
 } else{
@@ -37,6 +37,6 @@ if (class_exists($controllerName)) {
     show_error();
 }
 
-require_once 'views/layout/footer.php';
+require_once __DIR__.'/views/layout/footer.php';
 
 ?>

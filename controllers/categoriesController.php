@@ -1,6 +1,6 @@
 <?php
-require_once 'models/category.php';
-require_once 'models/product.php';
+require_once __DIR__.'/../models/category.php';
+require_once __DIR__.'/../models/product.php';
 
 class CategoriesController{
     public function index(){
@@ -8,11 +8,11 @@ class CategoriesController{
         $category = new Category;
         $categories = $category->getAll();
 
-        require_once 'views/categories/index.php';
+        require_once __DIR__.'/../views/categories/index.php';
     }
 
     public function create(){
-        require_once 'views/categories/create.php';
+        require_once __DIR__.'/../views/categories/create.php';
     }
 
     public function watch(){
@@ -27,7 +27,7 @@ class CategoriesController{
             $products = $product->getAllCategory();
         }
 
-        require_once 'views/categories/watch.php';
+        require_once __DIR__.'/../views/categories/watch.php';
     }
 
     public function save(){

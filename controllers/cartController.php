@@ -1,5 +1,5 @@
 <?php
-require_once 'models/product.php';
+require_once __DIR__.'/../models/product.php';
 
 class CartController{
 
@@ -10,7 +10,7 @@ class CartController{
             $cart = array();
         }
 
-        require_once 'views/cart/index.php';
+        require_once __DIR__.'/../views/cart/index.php';
     }
 
     public function add(){

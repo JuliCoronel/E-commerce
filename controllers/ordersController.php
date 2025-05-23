@@ -1,10 +1,10 @@
 <?php
-require_once 'models/order.php';
+require_once __DIR__.'/../models/order.php';
 
 class OrdersController{
     public function do(){
         
-        require_once 'views/orders/do.php';
+        require_once __DIR__.'/../views/orders/do.php';
     }
 
     public function add(){
@@ -59,7 +59,7 @@ class OrdersController{
         }
 
 
-        require_once 'views/orders/confirm.php';
+        require_once __DIR__.'/../views/orders/confirm.php';
     }
 
     public function myOrders(){
@@ -70,7 +70,7 @@ class OrdersController{
         $order->setUser_id($user_id);
         $orders = $order->getAllByUser();
 
-        require_once 'views/orders/my_orders.php';
+        require_once __DIR__.'/../views/orders/my_orders.php';
     }
 
     public function detail(){
@@ -88,7 +88,7 @@ class OrdersController{
             $products = $order_products->getProductsByOrder($id);
 
 
-            require_once'views/orders/detail.php';
+            require_once __DIR__.'/../views/orders/detail.php';
         } else{
             header("Location:".base_url."orders/myOrders");
         }
@@ -102,7 +102,7 @@ class OrdersController{
         $order = new Order();
         $orders = $order->getAll();
 
-        require_once'views/orders/my_orders.php';
+        require_once __DIR__.'/../views/orders/my_orders.php';
     }
 
     public function condition(){
